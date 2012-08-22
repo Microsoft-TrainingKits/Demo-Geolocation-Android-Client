@@ -1,0 +1,3 @@
+[submodule "Demo-Geolocation-Android-Client"]
+	path = Demo-Geolocation-Android-Client
+	url = git@github.com:WindowsAzure-Preview/Demo-Geolocation-Android-Client.git
