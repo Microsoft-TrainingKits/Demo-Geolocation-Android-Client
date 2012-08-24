@@ -132,13 +132,13 @@ public class Constants {
 
 1.  In the top left of the new display, select your emulator AVD.
 
-	![Selecting AVD in DDMS](image/ddmsSelectingAVD.png?raw=true "Selecting AVD in DDMS")
+	![Selecting AVD in DDMS](images/ddmsSelectingAVD.png?raw=true "Selecting AVD in DDMS")
 
 	_Selecting AVD in DDMS_
 
 1.  Scroll down in the Emulator Control panel beneath where you selected the AVD running.  Enter a longitude and latitude and then select send.
 
-	![Setting the Location](image/settingLocation.png?raw=true "Setting the Location")
+	![Setting the Location](images/settingLocation.png?raw=true "Setting the Location")
 
 	_Setting the Location_
 
@@ -194,7 +194,7 @@ public class Constants {
 
 1.  Scroll down if necessary and tap the Post POI button.
 
-	![Tapping Post POI](images/tappingSavePOI.png?raw=true "Tapping Post POI")
+	![Tapping Post POI](images/tappingSavePoi.png?raw=true "Tapping Post POI")
 
 	_Tapping POST POI_
 
