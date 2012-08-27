@@ -14,8 +14,7 @@
 	<Title>Connecting an Android Geolocation App to a Backend in Windows Azure Websites</Title>
 	<Version>1.0.0</Version>
 	<Source>.\Source</Source>
-	<DependencyChecker>Setup\Dependencies.depi</DependencyChecker>
-	<!--<CustomProperties>
-		<Property Name="GitHubRepository" Value="https://github.com/WindowsAzure-Preview/Demo-Geolocation-Android-Client" />
-	</CustomProperties>-->
+	<CustomProperties>
+		<Property Name="GitHubRepository" Value="https://github.com/WindowsAzure-Samples/Geolocation-Android-Client" />
+	</CustomProperties>
 </Demo>
