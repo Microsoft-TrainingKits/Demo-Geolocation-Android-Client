@@ -60,13 +60,13 @@ This demo is composed of the following segments:
 
 1.  Select the GeoDemo project and continue to import.
 
-	![Importing GeoDemo](images/importProject.png?raw=true "Importing GeoDemo")
+	![Importing GeoDemo](Images/importProject.png?raw=true "Importing GeoDemo")
 
 	_Importing GeoDemo
 
 1.  Expand the GeoDemo project in the Package Explorer and find Constants.java under src/com.msdpe.geodemo.misc.
 
-	![Opening Constants](images/openConstants.png?raw=true "Opening Constants)
+	![Opening Constants](Images/openConstants.png?raw=true "Opening Constants)
 
 	_Opening Constants_
 
@@ -106,19 +106,19 @@ public class Constants {
 
 1.  In Eclipse, right click on the Geo project and go to Run As and choose Android Application.
 
-	![Running the Application](images/runProject.png?raw=true "Running the Application")
+	![Running the Application](Images/runProject.png?raw=true "Running the Application")
 
 	_Running the Application_
 
 1.  The Android AVD should start.  It may first load a locked screen.  If it does, swipe right on the lock.
 
-	![Locked Android](images/unlockAVD.png?raw=true "Locked Android")
+	![Locked Android](Images/unlockAVD.png?raw=true "Locked Android")
 
 	_Locked Android AVD_
 
 1.  After loading, or unlocking, the Android emulator should bring up the geodemo.
 
-![First Run of GeoDemo](images/firstRun.png?raw=true "First Run of GeoDemo")
+![First Run of GeoDemo](Images/firstRun.png?raw=true "First Run of GeoDemo")
 
 	_First Run of GeoDemo_
 
@@ -132,19 +132,19 @@ public class Constants {
 
 1.  In the top left of the new display, select your emulator AVD.
 
-	![Selecting AVD in DDMS](images/ddmsSelectingAVD.png?raw=true "Selecting AVD in DDMS")
+	![Selecting AVD in DDMS](Images/ddmsSelectingAVD.png?raw=true "Selecting AVD in DDMS")
 
 	_Selecting AVD in DDMS_
 
 1.  Scroll down in the Emulator Control panel beneath where you selected the AVD running.  Enter a longitude and latitude and then select send.
 
-	![Setting the Location](images/settingLocation.png?raw=true "Setting the Location")
+	![Setting the Location](Images/settingLocation.png?raw=true "Setting the Location")
 
 	_Setting the Location_
 
 1.  The app should now center around the coordinates you entered.
 
-	![Map Centered on Coordinates](images/mapCenteredOnCoordinates.png?raw=true "Map Centered on Coordinates")
+	![Map Centered on Coordinates](Images/mapCenteredOnCoordinates.png?raw=true "Map Centered on Coordinates")
 
 	_Map Centered on Coordinates_
 
@@ -154,31 +154,31 @@ public class Constants {
 
 1.  Tap the Menu Button.
 
-	![Tapping Menu](images/tappingMenu.png?raw=true "Tapping Menu")
+	![Tapping Menu](Images/tappingMenu.png?raw=true "Tapping Menu")
 
 	_Tapping Menu_
 
 1.  Tap the Add POI (Point of Interest) button in the menu that appears at the bottom.
 
-	![Tapping Add POI](images/tappingAddPoi.png?raw=true "Tapping Add POI")
+	![Tapping Add POI](Images/tappingAddPoi.png?raw=true "Tapping Add POI")
 
 	_Tapping Add POI_
 
 1.  Tap the Select Image button.
 
-	![Tapping Select Image](images/tappingSelectImage.png?raw=true "Tapping Select Image")
+	![Tapping Select Image](Images/tappingSelectImage.png?raw=true "Tapping Select Image")
 
 	_Tapping Select Image_
 
 1.  Tap a saved image from the gallery.
 
-	![Tapping Saved Image](images/tappedImage.png?raw=true "Tapping Saved Image")
+	![Tapping Saved Image](Images/tappedImage.png?raw=true "Tapping Saved Image")
 
 	_Tapping Saved Image_
 
 1.  Tap the Get SAS URL button.
 
-	![Tapping Get SAS URL](images/tappingGetSasUrl.png?raw=true "Tapping Get SAS URL")
+	![Tapping Get SAS URL](Images/tappingGetSasUrl.png?raw=true "Tapping Get SAS URL")
 
 	_Tapping Get SAS URl_
 
@@ -188,25 +188,25 @@ public class Constants {
 
 1.  In just a moment you should see a SAS URL appear on the screen.
 
-	![Showing SAS URL](images/showingSasUrl.png?raw=true "Showing SAS URL")
+	![Showing SAS URL](Images/showingSasUrl.png?raw=true "Showing SAS URL")
 
 	_Showing SAS URL_
 
 1.  Scroll down if necessary and tap the Post POI button.
 
-	![Tapping Post POI](images/tappingSavePoi.png?raw=true "Tapping Post POI")
+	![Tapping Post POI](Images/tappingSavePoi.png?raw=true "Tapping Post POI")
 
 	_Tapping POST POI_
 
 1.  This screen will change quickly back to the map.  When you return to the map, you'll see a new pin has been dropped on the map.
 
-	![Pin Dropped](images/pinDropped.png?raw=true "Pin Dropped")
+	![Pin Dropped](Images/pinDropped.png?raw=true "Pin Dropped")
 
 	_Pin Dropped_
 
 1.  Tap on the PIN for more information on the post.
 
-	![Pin Info](images/pinInfo.png?raw=true "Pin Info")
+	![Pin Info](Images/pinInfo.png?raw=true "Pin Info")
 
 	_Pin Info_
 
@@ -223,7 +223,7 @@ public class Constants {
 
 1.  If you are still in the DDMS perspective, click the arrows pointing to the right at the top right of Eclipse and choose Java from the drop down.
 
-	![Returning to Java Perspective](images/javaPerspective.png?raw=true "Returning to Java Perspective")
+	![Returning to Java Perspective](Images/javaPerspective.png?raw=true "Returning to Java Perspective")
 
 	_Returning to Java Perspective_
 
