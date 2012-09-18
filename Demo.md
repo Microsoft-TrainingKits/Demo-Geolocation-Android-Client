@@ -1,5 +1,5 @@
 ﻿<a name="title" />
-# Geolocation - Android Client #
+# Connecting an Android Geolocation App to a Backend in Windows Azure Websites #
 
 ---
 
