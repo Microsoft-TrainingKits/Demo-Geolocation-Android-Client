@@ -50,56 +50,56 @@ This demo is composed of the following segments:
 >
 > Lets start by opening the Android application in Eclipse.
 
-1.  Open Eclipse.
+1. Open Eclipse.
 
-1.  Go to the File menu and choose Import.  
+1. Go to the File menu and choose Import.  
 
-1.  Choose "Existing Projects into Workspace".
+1. Choose "Existing Projects into Workspace".
 
-1.  Browse to the source directory of the GeoLocation-Android-Client folder.
+1. Browse to the source directory of the GeoLocation-Android-Client folder.
 
-1.  Select the GeoDemo project and continue to import.
+1. Select the GeoDemo project and continue to import.
 
 	![Importing GeoDemo](Images/importProject.png?raw=true "Importing GeoDemo")
 
-	_Importing GeoDemo
+	_Importing GeoDemo_
 
-1.  Expand the GeoDemo project in the Package Explorer and find Constants.java under src/com.msdpe.geodemo.misc.
+1. Expand the GeoDemo project in the Package Explorer and find Constants.java under src/com.msdpe.geodemo.misc.
 
 	![Opening Constants](Images/openConstants.png?raw=true "Opening Constants)
 
 	_Opening Constants_
 
-1.  Replace <your-subdomain> with site URL you set up for the PHP URL Shortener.
+1. Replace <your-subdomain> with site URL you set up for the PHP URL Shortener.
 
-````C#
-public class Constants {
+	````C#
+	public class Constants {
 
-	public static final String kFindPOIUrl = "http://<Your Subdomain>.azurewebsites.net/api/Location/FindPointsOfInterestWithinRadius";
-	public static final String kBlobSASUrl = "http://<Your Subdomain>.azurewebsites.net/api/blobsas/get?container=%s&blobname=%s";
-	public static final String kAddPOIUrl = "http://<Your Subdomain>.azurewebsites.net/api/location/postpointofinterest/";
-	
-	public static final String kContainerName = "test";
-}
-````
+		public static final String kFindPOIUrl = "http://<Your Subdomain>.azurewebsites.net/api/Location/FindPointsOfInterestWithinRadius";
+		public static final String kBlobSASUrl = "http://<Your Subdomain>.azurewebsites.net/api/blobsas/get?container=%s&blobname=%s";
+		public static final String kAddPOIUrl = "http://<Your Subdomain>.azurewebsites.net/api/location/postpointofinterest/";
+		
+		public static final String kContainerName = "test";
+	}
+	````
 
-1.  Afterwards, the URls should point to your site.
+1. Afterwards, the URls should point to your site.
 
-````C#
-public class Constants {
+	````C#
+	public class Constants {
 
-	public static final String kFindPOIUrl = "http://phpgeo.azurewebsites.net/api/Location/FindPointsOfInterestWithinRadius";
-	public static final String kBlobSASUrl = "http://phpgeo.azurewebsites.net/api/blobsas/get?container=%s&blobname=%s";
-	public static final String kAddPOIUrl = "http://phpgeo.azurewebsites.net/api/location/postpointofinterest/";
-	
-	public static final String kContainerName = "test";
-}
+		public static final String kFindPOIUrl = "http://phpgeo.azurewebsites.net/api/Location/FindPointsOfInterestWithinRadius";
+		public static final String kBlobSASUrl = "http://phpgeo.azurewebsites.net/api/blobsas/get?container=%s&blobname=%s";
+		public static final String kAddPOIUrl = "http://phpgeo.azurewebsites.net/api/location/postpointofinterest/";
+		
+		public static final String kContainerName = "test";
+	}
 
-````
+	````
 
-> **Speaking Point**
->
-> That's all we need to do to get this app ready to talk to our backend.  Next, let's walk through some of the functionality.
+	> **Speaking Point**
+	>
+	> That's all we need to do to get this app ready to talk to our backend.  Next, let's walk through some of the functionality.
 
 <a name="segment2" />
 ### Reviewing the App's Functionality ###
@@ -118,13 +118,14 @@ public class Constants {
 
 1.  After loading, or unlocking, the Android emulator should bring up the geodemo.
 
-![First Run of GeoDemo](Images/firstRun.png?raw=true "First Run of GeoDemo")
+	![First Run of GeoDemo](Images/firstRun.png?raw=true "First Run of GeoDemo")
 
 	_First Run of GeoDemo_
 
-> **Speaking Point**
->
-> The Android emulator doens't natively pull your location at all.  For this reason, we will fake our location.
+
+	> **Speaking Point**
+	>
+	> The Android emulator doens't natively pull your location at all.  For this reason, we will fake our location.
 
 1.  Return to Eclipse.
 
@@ -148,9 +149,9 @@ public class Constants {
 
 	_Map Centered on Coordinates_
 
-> **Speaking Point**
->
-> At this point there aren't any pins on the map becuase we haven't added any (unless you did before this demo).  Let's add some now.
+	> **Speaking Point**
+	>
+	> At this point there aren't any pins on the map becuase we haven't added any (unless you did before this demo).  Let's add some now.
 
 1.  Tap the Menu Button.
 
@@ -182,9 +183,9 @@ public class Constants {
 
 	_Tapping Get SAS URl_
 
-> **Speaking Point
->
-> SAS stands for Shared Access Signature.  A SAS URL gives you the ability to upload files to BLOB storage without having the account name and key in your app.  This is done for security purposes as if your key is in your app, other people could get access to it and upload whatever they wanted.  With the SAS URL, there is only a limited amount of time to upload file to the specific URL.
+	> **Speaking Point**
+	>
+	> SAS stands for Shared Access Signature.  A SAS URL gives you the ability to upload files to BLOB storage without having the account name and key in your app.  This is done for security purposes as if your key is in your app, other people could get access to it and upload whatever they wanted.  With the SAS URL, there is only a limited amount of time to upload file to the specific URL.
 
 1.  In just a moment you should see a SAS URL appear on the screen.
 
@@ -231,84 +232,84 @@ public class Constants {
 
 1.  Look at the loadPointsFromServer method.
 
-````C#
-String fetchUrl = Constants.kFindPOIUrl + "?latitude="
-		+ location.getLatitude() + "&longitude="
-		+ location.getLongitude() + "&radiusInMeters=1000";
-URL url = new URL(fetchUrl);
-HttpURLConnection urlConnection = (HttpURLConnection) url
-		.openConnection();
-try {
-	InputStream in = new BufferedInputStream(
-			urlConnection.getInputStream());
+	````C#
+	String fetchUrl = Constants.kFindPOIUrl + "?latitude="
+			+ location.getLatitude() + "&longitude="
+			+ location.getLongitude() + "&radiusInMeters=1000";
+	URL url = new URL(fetchUrl);
+	HttpURLConnection urlConnection = (HttpURLConnection) url
+			.openConnection();
+	try {
+		InputStream in = new BufferedInputStream(
+				urlConnection.getInputStream());
 
-	BufferedReader r = new BufferedReader(new InputStreamReader(in));
-	StringBuilder stringBuilderResult = new StringBuilder();
-	String line;
-	while ((line = r.readLine()) != null) {
-		stringBuilderResult.append(line);
-	}
-	Log.w(TAG, stringBuilderResult.toString());
+		BufferedReader r = new BufferedReader(new InputStreamReader(in));
+		StringBuilder stringBuilderResult = new StringBuilder();
+		String line;
+		while ((line = r.readLine()) != null) {
+			stringBuilderResult.append(line);
+		}
+		Log.w(TAG, stringBuilderResult.toString());
 
-	JSONArray jsonArray = new JSONArray(
-			stringBuilderResult.toString());
-	for (int i = 0; i < jsonArray.length(); i++) {
-		JSONObject jsonObject = jsonArray.getJSONObject(i);
-		Log.i(TAG, "Obj: " + jsonObject.toString());
-		Double latitude = jsonObject.getDouble("Latitude");
-		Double longitude = jsonObject.getDouble("Longitude");
-		String description = jsonObject.getString("Description");
-		String itemUrl = jsonObject.getString("Url");
-		// The item URL comes back with quotes at the beginning,
-		// so we strip them out
-		itemUrl = itemUrl.replace("\"", "");
+		JSONArray jsonArray = new JSONArray(
+				stringBuilderResult.toString());
+		for (int i = 0; i < jsonArray.length(); i++) {
+			JSONObject jsonObject = jsonArray.getJSONObject(i);
+			Log.i(TAG, "Obj: " + jsonObject.toString());
+			Double latitude = jsonObject.getDouble("Latitude");
+			Double longitude = jsonObject.getDouble("Longitude");
+			String description = jsonObject.getString("Description");
+			String itemUrl = jsonObject.getString("Url");
+			// The item URL comes back with quotes at the beginning,
+			// so we strip them out
+			itemUrl = itemUrl.replace("\"", "");
 
-		// Create a new geo point with this information and add it
-		// to the overlay
-		GeoPoint point = coordinatesToGeoPoint(new double[] {
-				latitude, longitude });
-		OverlayItem overlayitem = new OverlayItem(point,
-				description, itemUrl);
-		mItemizedOverlay.addOverlay(overlayitem);
-	}
-````
+			// Create a new geo point with this information and add it
+			// to the overlay
+			GeoPoint point = coordinatesToGeoPoint(new double[] {
+					latitude, longitude });
+			OverlayItem overlayitem = new OverlayItem(point,
+					description, itemUrl);
+			mItemizedOverlay.addOverlay(overlayitem);
+		}
+	````
 
-> **Speaking Point**
->
-> This method builds a url using the constant, kFindPOIUrl, which we set earlier, along with the current latitude and longitude as well as a radius.  A HttpURLConnection is then used to communicate with the service end point at that URL.  The data is read back in JSON format, put into a JSON Array, and looped through pulling out each Point of Interest's information.  Overlay items are then created and added to the map view.  
+	> **Speaking Point**
+	>
+	> This method builds a url using the constant, kFindPOIUrl, which we set earlier, along with the current latitude and longitude as well as a radius.  A HttpURLConnection is then used to communicate with the service end point at that URL.  The data is read back in JSON format, put into a JSON Array, and looped through pulling out each Point of Interest's information.  Overlay items are then created and added to the map view.  
 
 1.  Open the AddPointOfInterestActivity.java from src/com.msdpe.geodemo.ui.
 
 1.  Pull up the getSas method.
 
-````C#
-String fetchUrl = String.format(Constants.kBlobSASUrl, Constants.kContainerName,
-		System.currentTimeMillis());
-Log.i(TAG, "FetchURL: " + fetchUrl);
-URL url = new URL(fetchUrl);
-HttpURLConnection urlConnection = (HttpURLConnection) url
-		.openConnection();
+	````C#
+	String fetchUrl = String.format(Constants.kBlobSASUrl, Constants.kContainerName,
+			System.currentTimeMillis());
+	Log.i(TAG, "FetchURL: " + fetchUrl);
+	URL url = new URL(fetchUrl);
+	HttpURLConnection urlConnection = (HttpURLConnection) url
+			.openConnection();
 
-InputStream in = new BufferedInputStream(
-		urlConnection.getInputStream());
+	InputStream in = new BufferedInputStream(
+			urlConnection.getInputStream());
 
-BufferedReader r = new BufferedReader(new InputStreamReader(in));
-StringBuilder total = new StringBuilder();
-String line;
-while ((line = r.readLine()) != null) {
-	total.append(line);
-}
-Log.w(TAG, total.toString());
-_blobImagePostString = total.toString();
-````
+	BufferedReader r = new BufferedReader(new InputStreamReader(in));
+	StringBuilder total = new StringBuilder();
+	String line;
+	while ((line = r.readLine()) != null) {
+		total.append(line);
+	}
+	Log.w(TAG, total.toString());
+	_blobImagePostString = total.toString();
+	````
 
-This method is building a URL from the kBlobSASURL constant we set up earlier as well as a container name (set to "test" for now) and the current time in milliseconds.  We then use a HttpURLConnection to hit the server and request our SAS.
+	> **Note:** This method is building a URL from the kBlobSASURL constant we set up earlier as well as a container name (set to "test" for now) and the current time in milliseconds.  We then use a HttpURLConnection to hit the server and request our SAS.
 
 1.  Now look at the postPointOfInterestToServer method (not shown here for brevity).
 
-> **Speaking Point**
->
-> The PostPOI method really does two different things.  First it uploads our image file to BLOB storage using the SAS URL.  Remember that this URL only works for a limited amount of time and has to be authorized by the server.  Next, provided that was a success, we post the details of the point of interest (the latitude and location, the image name, the image url, etc) to another endpoint in the service.  When that comes back a success, we return back to the map view and trigger a refresh of the points of interest within our radius.
+	> **Speaking Point**
+	>
+	> The PostPOI method really does two different things.  First it uploads our image file to BLOB storage using the SAS URL.  Remember that this URL only works for a limited amount of time and has to be authorized by the server.  Next, provided that was a success, we post the details of the point of interest (the latitude and location, the image name, the image url, etc) to another endpoint in the service.  When that comes back a success, we return back to the map view and trigger a refresh of the points of interest within our radius.
 
 ---
 
